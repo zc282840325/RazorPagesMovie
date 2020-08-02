@@ -1,10 +1,21 @@
 ﻿@page
 @model IndexModel
+@using RazorPagesMovie.Models
 @{
     ViewData["Title"] = "Home page";
+    var joe = new Movie(1, "张三");
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <a href="mailto:Support@contoso.com">Support@contoso.com</a>
+        <hr />
+        <p>@DateTime.Now</p>
+        <p>@DateTime.IsLeapYear(2016)</p>
+        <hr />
+        <p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+        <p>Last week: 7/7/2016 4:39:52 PM - TimeSpan.FromDays(7)</p>
+        <hr />
+        <p>Title:@(joe.Title)</p>
+    </div>

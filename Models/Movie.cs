@@ -8,6 +8,11 @@ namespace RazorPagesMovie.Models
 {
     public class Movie
     {
+        public Movie(int id,string title)
+        {
+            ID = id;
+            Title = title;
+        }
         public int ID { get; set; }
         public string Title { get; set; }
 
